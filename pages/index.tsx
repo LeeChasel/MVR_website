@@ -1,5 +1,30 @@
 import Head from 'next/head'
-import TopNavbar from './components/topnavbar'
+import Carousel  from 'react-bootstrap/Carousel'
+import Image from 'next/image'
+
+function PhotoCarousel()
+{
+  return (
+    <div className='d-flex justify-content-center'>
+    <Carousel className='w-75'>
+      <Carousel.Item>
+        <Image src="/photoCarousel/1.jpg" alt="Picture 1" width="1000" height="666" className='d-block mw-100'/>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image src="/photoCarousel/2.jpg" alt="Picture 2" width="1000" height="666" className='d-block mw-100'/>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image src="/photoCarousel/3.jpg" alt="Picture 3" width="1000" height="666" className='d-block mw-100'/>
+      </Carousel.Item>
+      <Carousel.Item>
+        <Image src="/photoCarousel/4.jpg" alt="Picture 4" width="1000" height="666" className='d-block mw-100'/>
+      </Carousel.Item>
+    </Carousel>
+    </div>
+  )
+
+}
+
 export default function Home() {
   return (
     <>
@@ -11,6 +36,7 @@ export default function Home() {
       </Head>
       <main>
         <h1 className='text-center m-5'>首頁</h1>
+        <PhotoCarousel />
       </main>
     </>
   )
