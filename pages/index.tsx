@@ -8,21 +8,20 @@ function PhotoCarousel()
     <div className='d-flex justify-content-center'>
     <Carousel className='w-75'>
       <Carousel.Item>
-        <Image src="/photoCarousel/1.jpg" alt="Picture 1" width="1000" height="666" className='d-block mw-100'/>
+        <Image src="/photoCarousel/1.jpg" alt="Picture 1" width="1500" height="1000" className='w-100'/>
       </Carousel.Item>
       <Carousel.Item>
-        <Image src="/photoCarousel/2.jpg" alt="Picture 2" width="1000" height="666" className='d-block mw-100'/>
+        <Image src="/photoCarousel/2.jpg" alt="Picture 2" width="1500" height="1000" className='w-100'/>
       </Carousel.Item>
       <Carousel.Item>
-        <Image src="/photoCarousel/3.jpg" alt="Picture 3" width="1000" height="666" className='d-block mw-100'/>
+        <Image src="/photoCarousel/3.jpg" alt="Picture 3" width="1500" height="1000" className='w-100'/>
       </Carousel.Item>
       <Carousel.Item>
-        <Image src="/photoCarousel/4.jpg" alt="Picture 4" width="1000" height="666" className='d-block mw-100'/>
+        <Image src="/photoCarousel/4.jpg" alt="Picture 4" width="1500" height="1000" className='w-100'/>
       </Carousel.Item>
     </Carousel>
     </div>
   )
-
 }
 
 export default function Home() {

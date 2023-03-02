@@ -2,6 +2,8 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from 'react-bootstrap/Navbar'
 import Link from "next/link"
+import Button from 'react-bootstrap/Button'
+import {FaUserAlt} from 'react-icons/fa'
 
 export default function TopNavbar()
 {
@@ -30,10 +32,15 @@ export default function TopNavbar()
                                 <span className="fs-5 fw-bolder">
                                     製作團隊
                                 </span>
-                                </Nav.Link>
+                            </Nav.Link>
                         </Link>
                     </Nav>
-                </Navbar.Collapse>
+                <Link href="/login" legacyBehavior passHref>
+                    <Button variant="light" className="mx-1">
+                        <FaUserAlt />
+                    </Button>
+                 </Link>
+                </Navbar.Collapse>           
             </Container>
         </Navbar>
     )
