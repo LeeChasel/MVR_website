@@ -34,12 +34,12 @@ export default function TopNavbar()
                                 </span>
                             </Nav.Link>
                         </Link>
+                        <Link href="/login" legacyBehavior passHref>
+                            <Nav.Link>
+                                <FaUserAlt className="mx-1"/>
+                            </Nav.Link>
+                        </Link>
                     </Nav>
-                <Link href="/login" legacyBehavior passHref>
-                    <Button variant="light" className="mx-1">
-                        <FaUserAlt />
-                    </Button>
-                 </Link>
                 </Navbar.Collapse>           
             </Container>
         </Navbar>
