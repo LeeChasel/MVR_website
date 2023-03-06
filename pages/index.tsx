@@ -1,12 +1,15 @@
 import Head from 'next/head'
 import Carousel  from 'react-bootstrap/Carousel'
-import Image from 'next/image'
+import Image from 'next/legacy/image';
 
 function PhotoCarousel()
 {
   return (
     <div className='d-flex justify-content-center'>
     <Carousel className='w-75'>
+      <Carousel.Item>
+        <Image src="/photoCarousel/1.jpg" alt="Picture 1" width="1500" height="1000" className='w-100'/>
+      </Carousel.Item>
       <Carousel.Item>
         <Image src="/photoCarousel/1.jpg" alt="Picture 1" width="1500" height="1000" className='w-100'/>
       </Carousel.Item>
