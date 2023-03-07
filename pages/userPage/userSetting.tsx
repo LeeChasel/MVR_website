@@ -1,4 +1,23 @@
+import ListGroup from 'react-bootstrap/ListGroup';
 import Head from "next/head"
+import Link from 'next/link';
+
+function Menu()
+{
+    return (
+    <ListGroup className='gap-3'>
+        <Link href="accountSetting" legacyBehavior passHref>
+            <ListGroup.Item action>更改帳號</ListGroup.Item>
+        </Link>
+        <Link href="passwordSetting" legacyBehavior passHref>
+            <ListGroup.Item action>更改密碼</ListGroup.Item>
+        </Link>
+        <Link href="friendList" legacyBehavior passHref>
+            <ListGroup.Item action>好友清單</ListGroup.Item>
+        </Link>
+    </ListGroup>
+    )
+}
 
 export default function UserSetting()
 {
@@ -11,12 +30,8 @@ export default function UserSetting()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            s
-
-
-
+            <Menu/>
         </main>
-        
         </>
     )
 }

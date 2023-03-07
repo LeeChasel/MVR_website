@@ -15,7 +15,7 @@ function Password()
         <>
             <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>密碼</Form.Label>
-                    <Form.Control type={passwordShown ? "text" : "password"} placeholder="輸入密碼" />
+                    <Form.Control required type={passwordShown ? "text" : "password"} placeholder="輸入密碼" />
             </Form.Group>
             <Button variant="light" onClick={togglePassword}>
                 <BiShow />
@@ -40,12 +40,10 @@ export default function Register()
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>帳號</Form.Label>
-                        <Form.Control type="email" placeholder="輸入帳號" />
+                        <Form.Control required type="email" placeholder="輸入帳號" />
                     </Form.Group>
                     <Password />
-                <Button variant="primary" type="submit">
-                    註冊帳號
-                </Button>
+                    <Button variant="primary" type="submit">註冊帳號</Button>
                 </Form>
             </div>
         </main>

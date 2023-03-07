@@ -16,7 +16,7 @@ function Password()
         <>
             <Form.Group className="mb-3" controlId="formBasicPassword">
                     <Form.Label>密碼</Form.Label>
-                    <Form.Control type={passwordShown ? "text" : "password"} placeholder="輸入密碼" />
+                    <Form.Control required type={passwordShown ? "text" : "password"} name="password" placeholder="輸入密碼" />
             </Form.Group>
             <Button variant="light" onClick={togglePassword}>
                 <BiShow />
@@ -27,24 +27,30 @@ function Password()
 
 function LoginForm()
 {
+    const handleLogin = (event: any) => {
+        event.preventDefault();
+        if (event.target.account.value == "tkuim@gmail.com" && event.target.password.value == "tkuim")
+        {
+            window.alert("登入成功!!");
+            window.location.replace("/userPage/userSetting")
+        } else {
+            window.alert("登入失敗!!");
+        }
+    }
     return (
         <>
         <h1 className='text-center m-5'>登入畫面</h1>
         <div className='d-flex justify-content-center'>
-            <Form>
+            <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>帳號</Form.Label>
-                    <Form.Control type="email" placeholder="輸入帳號" />
+                    <Form.Control required type="email" name='account' placeholder="輸入帳號" />
                 </Form.Group>
                 <Password />
-            <Button variant="primary" type="submit">
-                登入
-            </Button>
-            <Link href="/userPage/register" legacyBehavior passHref>
-            <Button variant="primary">
-                註冊帳號
-            </Button>
-            </Link>
+                <Button variant="primary" type="submit">登入</Button>
+                <Link href="/userPage/register" legacyBehavior passHref>
+                    <Button variant="primary">註冊帳號</Button>
+                </Link>
             </Form>
         </div>
         </>
