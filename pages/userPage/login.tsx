@@ -1,25 +1,53 @@
 import Head from 'next/head'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import Link from 'next/link';
+import { useState } from 'react';
+import { BiShow } from 'react-icons/bi'
+
+function Password()
+{
+    const [passwordShown, setPasswordShown] = useState(false);
+
+    const togglePassword = () => {
+        setPasswordShown(!passwordShown);
+    }
+    return (
+        <>
+            <Form.Group className="mb-3" controlId="formBasicPassword">
+                    <Form.Label>密碼</Form.Label>
+                    <Form.Control type={passwordShown ? "text" : "password"} placeholder="輸入密碼" />
+            </Form.Group>
+            <Button variant="light" onClick={togglePassword}>
+                <BiShow />
+            </Button>
+        </>
+    )
+}
 
 function LoginForm()
 {
     return (
+        <>
+        <h1 className='text-center m-5'>登入畫面</h1>
         <div className='d-flex justify-content-center'>
             <Form>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>帳號</Form.Label>
                     <Form.Control type="email" placeholder="輸入帳號" />
                 </Form.Group>
-                <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>密碼</Form.Label>
-                    <Form.Control type="password" placeholder="輸入密碼" />
-                </Form.Group>
+                <Password />
             <Button variant="primary" type="submit">
                 登入
             </Button>
+            <Link href="/userPage/register" legacyBehavior passHref>
+            <Button variant="primary">
+                註冊帳號
+            </Button>
+            </Link>
             </Form>
         </div>
+        </>
     )
 }
 
@@ -34,7 +62,6 @@ export default function Login()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            <h1 className='text-center m-5'>登入畫面</h1>
             <LoginForm />
         </main>
         </>

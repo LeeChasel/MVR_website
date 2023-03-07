@@ -2,7 +2,6 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from 'react-bootstrap/Navbar'
 import Link from "next/link"
-import Button from 'react-bootstrap/Button'
 import {FaUserAlt} from 'react-icons/fa'
 
 export default function TopNavbar()
@@ -34,7 +33,7 @@ export default function TopNavbar()
                                 </span>
                             </Nav.Link>
                         </Link>
-                        <Link href="/login" legacyBehavior passHref>
+                        <Link href="/userPage/login" legacyBehavior passHref>
                             <Nav.Link>
                                 <FaUserAlt className="mx-1"/>
                             </Nav.Link>
