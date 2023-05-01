@@ -17,7 +17,7 @@ function PhotoCarousel()
           <Image src="/photoCarousel/world.png" alt="Choose world" width="1500" height="1000" className='w-100'/>
         </Carousel.Item>
         <Carousel.Item>
-          <Image src="/photoCarousel/event_world.png" alt="Choose world" width="1500" height="1000" className='w-100'/>
+          <Image src="/photoCarousel/event_world.PNG" alt="Event" width="1500" height="1000" className='w-100'/>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/shop1.PNG" alt="Choose world" width="1500" height="1000" className='w-100'/>
