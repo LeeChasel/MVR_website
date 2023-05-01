@@ -39,8 +39,7 @@ function LoginForm()
     }
     return (
         <>
-        <h1 className='text-center m-5'>登入畫面</h1>
-        <div className='d-flex justify-content-center'>
+        <div className='d-flex justify-content-center mt-4'>
             <Form onSubmit={handleLogin}>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>帳號</Form.Label>

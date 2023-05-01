@@ -35,7 +35,8 @@ export default function TopNavbar()
                         </Link>
                         <Link href="/userPage/login" legacyBehavior passHref>
                             <Nav.Link>
-                                <FaUserAlt className="mx-1"/>
+                                <FaUserAlt className="mx-1 mb-2"/>
+                                <span className="fs-5 fw-bolder">設定</span>
                             </Nav.Link>
                         </Link>
                     </Nav>

@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Image from 'next/legacy/image';
 
 export default function IntroduceTeam()
 {
@@ -11,7 +12,38 @@ export default function IntroduceTeam()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            <h1 className='text-center m-5'>介紹團隊成員</h1>
+            <div className='d-flex flex-column justify-content-center m-4'>
+                <div className='container'>
+                    <div className='row row-cols-3'>
+                        {/* row-1 */}
+                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
+                            <Image src="/avatar/30448.jpg" alt="30448" width="350" height="500" className='rounded'/>
+                            <h3 className='mt-1'>孫耀庭</h3>
+                        </div>
+                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
+                            <Image src="/avatar/30414.jpg" alt="30414" width="350" height="500" className='rounded'/>
+                            <h3 className='mt-1'>劉宣珉</h3>
+                        </div>
+                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
+                            <Image src="/avatar/30141.jpg" alt="30141" width="350" height="500" className='rounded'/>
+                            <h3 className='mt-1'>張宇辰</h3>
+                        </div>
+                        {/* row-2 */}
+                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
+                            <Image src="/avatar/30927.jpg" alt="30927" width="350" height="500" className='rounded'/>
+                            <h3 className='mt-1'>李佳翰</h3>
+                        </div>
+                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
+                            <Image src="/avatar/31396.jpg" alt="31396" width="350" height="500" className='rounded'/>
+                            <h3 className='mt-1'>施品伃</h3>
+                        </div>
+                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
+                            <Image src="/avatar/31453.jpg" alt="31453" width="350" height="500" className='rounded'/>
+                            <h3 className='mt-1'>甯子倢</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
         </>
     )
