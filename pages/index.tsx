@@ -6,23 +6,23 @@ function PhotoCarousel()
 {
   return (
     <div className='d-flex justify-content-center'>
-    <Carousel className='w-75'>
-      <Carousel.Item>
-        <Image src="/photoCarousel/1.jpg" alt="Picture 1" width="1500" height="1000" className='w-100'/>
-      </Carousel.Item>
-      <Carousel.Item>
-        <Image src="/photoCarousel/1.jpg" alt="Picture 1" width="1500" height="1000" className='w-100'/>
-      </Carousel.Item>
-      <Carousel.Item>
-        <Image src="/photoCarousel/2.jpg" alt="Picture 2" width="1500" height="1000" className='w-100'/>
-      </Carousel.Item>
-      <Carousel.Item>
-        <Image src="/photoCarousel/3.jpg" alt="Picture 3" width="1500" height="1000" className='w-100'/>
-      </Carousel.Item>
-      <Carousel.Item>
-        <Image src="/photoCarousel/4.jpg" alt="Picture 4" width="1500" height="1000" className='w-100'/>
-      </Carousel.Item>
-    </Carousel>
+      <Carousel className='w-75'>
+        <Carousel.Item>
+          <Image src="/photoCarousel/interface.png" alt="Login UI" width="1500" height="1000" className='w-100'/>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image src="/photoCarousel/main_menu.PNG" alt="Main menu" width="1500" height="1000" className='w-100'/>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image src="/photoCarousel/world.png" alt="Choose world" width="1500" height="1000" className='w-100'/>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image src="/photoCarousel/event_world.png" alt="Choose world" width="1500" height="1000" className='w-100'/>
+        </Carousel.Item>
+        <Carousel.Item>
+          <Image src="/photoCarousel/shop1.PNG" alt="Choose world" width="1500" height="1000" className='w-100'/>
+        </Carousel.Item>
+      </Carousel>
     </div>
   )
 }

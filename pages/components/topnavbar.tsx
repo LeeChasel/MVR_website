@@ -12,7 +12,7 @@ export default function TopNavbar()
                 <Navbar.Brand>
                     <h1>MVR</h1>
                 </Navbar.Brand>
-                <Navbar.Text className="px-4 "><h4>Music in your mind, Space on your Definition</h4></Navbar.Text>
+                <Navbar.Text className="px-4 "><h4>Music in your mind, Space on your definition</h4></Navbar.Text>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                     <Nav>
