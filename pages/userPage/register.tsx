@@ -14,12 +14,14 @@ function Password()
     return (
         <>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>密碼</Form.Label>
+                <div className='d-flex align-items-center mb-1'>
+                    <Form.Label className='flex-grow-1'>密碼</Form.Label>
+                    <Button variant="light" onClick={togglePassword}>
+                        <BiShow />
+                    </Button>
+                </div>
                     <Form.Control required type={passwordShown ? "text" : "password"} placeholder="輸入密碼" />
             </Form.Group>
-            <Button variant="light" onClick={togglePassword}>
-                <BiShow />
-            </Button>
         </>
     )
 }
@@ -35,15 +37,17 @@ export default function Register()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            <h1 className='text-center m-5'>註冊畫面</h1>
-            <div className='d-flex justify-content-center'>
-                <Form>
+            <div className='d-flex justify-content-center mt-4'>
+                <Form className='bg-white rounded w-25 p-3'>
+                    <h2 className='text-center mb-3'>註冊</h2>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>帳號</Form.Label>
                         <Form.Control required type="email" placeholder="輸入帳號" />
                     </Form.Group>
                     <Password />
-                    <Button variant="primary" type="submit">註冊帳號</Button>
+                    <div className='d-flex justify-content-center'>
+                        <Button variant="primary" type="submit" className='w-50'>註冊帳號</Button>
+                    </div>
                 </Form>
             </div>
         </main>

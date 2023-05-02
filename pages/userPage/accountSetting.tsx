@@ -11,7 +11,7 @@ export default function AccountSetting()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            Account
+            <h1 className="text-white m-4">更改帳號頁面</h1>
         </main>
         </>
     )

@@ -5,7 +5,7 @@ import Image from 'next/legacy/image';
 function PhotoCarousel()
 {
   return (
-    <div className='d-flex justify-content-center mt-4'>
+    <div className='d-flex justify-content-center mt-5'>
       <Carousel className='w-75'>
         <Carousel.Item>
           <Image src="/photoCarousel/interface.png" alt="Login UI" width="1500" height="1000" className='w-100'/>
@@ -37,7 +37,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        
         <PhotoCarousel />
       </main>
     </>

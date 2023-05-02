@@ -11,7 +11,7 @@ export default function FriendList()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            friend
+            <h1 className="text-white m-4">好友清單頁面</h1>
         </main>
         </>
     )

@@ -15,12 +15,14 @@ function Password()
     return (
         <>
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                    <Form.Label>密碼</Form.Label>
-                    <Form.Control required type={passwordShown ? "text" : "password"} name="password" placeholder="輸入密碼" />
+                <div className='d-flex align-items-center mb-1'>
+                    <Form.Label className='flex-grow-1'>密碼</Form.Label>
+                    <Button variant="light" onClick={togglePassword}>
+                        <BiShow/>
+                    </Button>
+                </div>
+                <Form.Control required type={passwordShown ? "text" : "password"} name="password" placeholder="輸入密碼" />
             </Form.Group>
-            <Button variant="light" onClick={togglePassword}>
-                <BiShow />
-            </Button>
         </>
     )
 }
@@ -40,16 +42,19 @@ function LoginForm()
     return (
         <>
         <div className='d-flex justify-content-center mt-4'>
-            <Form onSubmit={handleLogin}>
+            <Form onSubmit={handleLogin} className='bg-white rounded w-25 p-3'>
+                <h2 className='text-center mb-3'>使用者登入</h2>
                 <Form.Group className="mb-3" controlId="formBasicEmail">
                     <Form.Label>帳號</Form.Label>
                     <Form.Control required type="email" name='account' placeholder="輸入帳號" />
                 </Form.Group>
                 <Password />
-                <Button variant="primary" type="submit">登入</Button>
-                <Link href="/userPage/register" legacyBehavior passHref>
-                    <Button variant="primary">註冊帳號</Button>
-                </Link>
+                <div className='d-flex justify-content-around gap-5'>
+                    <Link href="/userPage/register" legacyBehavior passHref>
+                        <Button variant="primary" className='w-50'>註冊帳號</Button>
+                    </Link>
+                    <Button variant="primary" type="submit" className='w-50'>登入</Button>
+                </div>
             </Form>
         </div>
         </>

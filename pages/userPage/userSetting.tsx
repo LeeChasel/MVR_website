@@ -5,7 +5,7 @@ import Link from 'next/link';
 function Menu()
 {
     return (
-    <ListGroup className='gap-3'>
+    <ListGroup className='gap-2 m-3 bg-white'>
         <Link href="accountSetting" legacyBehavior passHref>
             <ListGroup.Item action>更改帳號</ListGroup.Item>
         </Link>
