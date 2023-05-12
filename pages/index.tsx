@@ -1,43 +1,28 @@
 import Head from 'next/head'
 import Carousel  from 'react-bootstrap/Carousel'
 import Image from 'next/legacy/image';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 function PhotoCarousel()
 {
   return (
     <>
-    <h1 className='fw-bold text-white text-center mt-4'>系統畫面簡介</h1>
     <div className='d-flex justify-content-center mt-4'>
       <Carousel className='w-75'>
         <Carousel.Item>
           <Image src="/photoCarousel/interface.png" alt="Login UI" width="1500" height="1000" className='w-100'/>
-          <Carousel.Caption>
-            <p className='fs-3 text-bg-light badge'>戴上VR眼鏡進入主畫面，輸入帳號密碼，即登入完成</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/main_menu.PNG" alt="Main menu" width="1500" height="1000" className='w-100'/>
-          <Carousel.Caption>
-            <p className='fs-3 text-bg-light badge'>在主選單選擇想進行的動作</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/world.png" alt="Choose world" width="1500" height="1000" className='w-100'/>
-          <Carousel.Caption>
-            <p className='fs-3 text-bg-light badge'>選擇預設世界或由自己創造新世界</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/event_world.PNG" alt="Event" width="1500" height="1000" className='w-100'/>
-          <Carousel.Caption>
-            <p className='fs-3 text-bg-light badge'>在開放空間參與演唱會，使用在商店取得的商品支持表演者</p>
-          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/shop1.PNG" alt="Choose world" width="1500" height="1000" className='w-100'/>
-          <Carousel.Caption>
-            <p className='fs-3 text-bg-light badge'>在活動開放前提供特定的商店，販賣活動商品</p>
-          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>
@@ -56,7 +41,20 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <PhotoCarousel />
+        <div className='m-4 p-2 bg-gradient rounded text-white d-flex flex-column'>
+          <h1 className='fw-bold text-center mt-2'>MVR系統</h1>
+          <p className='fs-4'>MVR系統透過虛擬實境以及人工智慧等技術，讓使用者可以在虛擬空間中進行歌唱、演奏樂器等活動，並與好友共同參與其中，提供了一個高自由度、安全且多樣的社交互動方式</p>
+          <h1 className='fw-bold text-center mt-3'>系統畫面簡介</h1>
+          <p className='fs-4'>以下將展示系統畫面，依序為</p>
+          <ListGroup as='ol' numbered className='w-50 align-self-center fs-5'>
+            <ListGroup.Item as='li' variant="secondary">戴上VR眼鏡進入主畫面，輸入帳號密碼，即登入完成</ListGroup.Item>
+            <ListGroup.Item as='li' variant="secondary">在主選單選擇想進行的動作</ListGroup.Item>
+            <ListGroup.Item as='li' variant="secondary">選擇預設世界或由自己創造新世界</ListGroup.Item>
+            <ListGroup.Item as='li' variant="secondary">在開放空間參與演唱會，使用在商店取得的商品支持表演者</ListGroup.Item>
+            <ListGroup.Item as='li' variant="secondary">在活動開放前提供特定的商店，販賣活動商品</ListGroup.Item>
+          </ListGroup>
+          <PhotoCarousel />
+        </div>
       </main>
     </>
   )
