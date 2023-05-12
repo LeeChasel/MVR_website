@@ -13,7 +13,7 @@ export default function Features()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            <div className='m-4 p-2 bg-gradient rounded'>
+            <div className='m-4 p-3 bg-gradient rounded'>
                 <h1 className='fw-bold text-white text-center mt-2'>功能介紹</h1>
                 <div>
                     <div className='d-flex gap-3 mb-4'>

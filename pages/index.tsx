@@ -6,7 +6,6 @@ import ListGroup from 'react-bootstrap/ListGroup';
 function PhotoCarousel()
 {
   return (
-    <>
     <div className='d-flex justify-content-center mt-4'>
       <Carousel className='w-75'>
         <Carousel.Item>
@@ -26,8 +25,6 @@ function PhotoCarousel()
         </Carousel.Item>
       </Carousel>
     </div>
-    </>
-
   )
 }
 
@@ -41,8 +38,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <div className='m-4 p-2 bg-gradient rounded text-white d-flex flex-column'>
-          <h1 className='fw-bold text-center mt-2'>MVR系統</h1>
+        <div className='m-4 p-3 bg-gradient rounded text-white d-flex flex-column'>
+          <h1 className='fw-bold text-center'>系統介紹</h1>
           <p className='fs-4'>MVR系統透過虛擬實境以及人工智慧等技術，讓使用者可以在虛擬空間中進行歌唱、演奏樂器等活動，並與好友共同參與其中，提供了一個高自由度、安全且多樣的社交互動方式</p>
           <h1 className='fw-bold text-center mt-3'>系統畫面簡介</h1>
           <p className='fs-4'>以下將展示系統畫面，依序為</p>
