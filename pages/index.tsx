@@ -5,25 +5,44 @@ import Image from 'next/legacy/image';
 function PhotoCarousel()
 {
   return (
-    <div className='d-flex justify-content-center mt-5'>
+    <>
+    <h1 className='fw-bold text-white text-center mt-4'>系統畫面簡介</h1>
+    <div className='d-flex justify-content-center mt-4'>
       <Carousel className='w-75'>
         <Carousel.Item>
           <Image src="/photoCarousel/interface.png" alt="Login UI" width="1500" height="1000" className='w-100'/>
+          <Carousel.Caption>
+            <p className='fs-3 text-bg-light badge'>戴上VR眼鏡進入主畫面，輸入帳號密碼，即登入完成</p>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/main_menu.PNG" alt="Main menu" width="1500" height="1000" className='w-100'/>
+          <Carousel.Caption>
+            <p className='fs-3 text-bg-light badge'>在主選單選擇想進行的動作</p>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/world.png" alt="Choose world" width="1500" height="1000" className='w-100'/>
+          <Carousel.Caption>
+            <p className='fs-3 text-bg-light badge'>選擇預設世界或由自己創造新世界</p>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/event_world.PNG" alt="Event" width="1500" height="1000" className='w-100'/>
+          <Carousel.Caption>
+            <p className='fs-3 text-bg-light badge'>在開放空間參與演唱會，使用在商店取得的商品支持表演者</p>
+          </Carousel.Caption>
         </Carousel.Item>
         <Carousel.Item>
           <Image src="/photoCarousel/shop1.PNG" alt="Choose world" width="1500" height="1000" className='w-100'/>
+          <Carousel.Caption>
+            <p className='fs-3 text-bg-light badge'>在活動開放前提供特定的商店，販賣活動商品</p>
+          </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
     </div>
+    </>
+
   )
 }
 

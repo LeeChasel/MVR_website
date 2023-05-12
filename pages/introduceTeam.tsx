@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/legacy/image';
+import Stack from 'react-bootstrap/Stack';
 
 export default function IntroduceTeam()
 {
@@ -12,37 +13,70 @@ export default function IntroduceTeam()
         <link rel="icon" href="/favicon.ico" />
         </Head>
         <main>
-            <div className='d-flex flex-column justify-content-center m-4'>
-                <div className='container'>
-                    <div className='row row-cols-3'>
-                        {/* row-1 */}
-                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
-                            <Image src="/avatar/30448.jpg" alt="30448" width="350" height="500" className='rounded'/>
-                            <h3 className='mt-1 text-white'>孫耀庭</h3>
+            <div className='m-4 p-2 bg-secondary bg-gradient rounded'>
+                <Stack gap={4}>
+                    <h1 className='fw-bold text-white text-center mt-2'>團隊成員</h1>
+                    <div className='d-flex gap-3 mx-4'>
+                        <div className='w-25'>
+                            <Image src="/avatar/30448.webp" alt="30448" width="600" height="600" className='rounded'/>
                         </div>
-                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
-                            <Image src="/avatar/30414.jpg" alt="30414" width="350" height="500" className='rounded'/>
-                            <h3 className='mt-1 text-white'>劉宣珉</h3>
-                        </div>
-                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
-                            <Image src="/avatar/30141.jpg" alt="30141" width="350" height="500" className='rounded'/>
-                            <h3 className='mt-1 text-white'>張宇辰</h3>
-                        </div>
-                        {/* row-2 */}
-                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
-                            <Image src="/avatar/30927.jpg" alt="30927" width="350" height="500" className='rounded'/>
-                            <h3 className='mt-1 text-white'>李佳翰</h3>
-                        </div>
-                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
-                            <Image src="/avatar/31396.jpg" alt="31396" width="350" height="500" className='rounded'/>
-                            <h3 className='mt-1 text-white'>施品伃</h3>
-                        </div>
-                        <div className='col justify-content-center d-flex flex-column text-center mb-2'>
-                            <Image src="/avatar/31453.jpg" alt="31453" width="350" height="500" className='rounded'/>
-                            <h3 className='mt-1 text-white'>甯子倢</h3>
+                        <div className='my-1 text-white w-75'>
+                            <h2 className='text-primary fw-bolder'>孫耀庭</h2>
+                            <h4>規劃流程與管理</h4>
+                            <h4 className='lh-base'>工作內容：負責制定開發目標、短期長期目標與明確的日程規劃，後續進行追蹤與微調</h4>
                         </div>
                     </div>
-                </div>
+                    <div className='d-flex gap-3 mx-4'>
+                        <div className='w-25'>
+                            <Image src="/avatar/30414.webp" alt="30414" width="600" height="600" className='rounded'/>
+                        </div>
+                        <div className='my-1 text-white w-75'>
+                            <h2 className='text-primary fw-bolder'>劉宣珉</h2>
+                            <h4>挑選物件模型、背景與製作</h4>
+                            <h4 className='lh-base'>工作內容：負責尋找可使用的物件資源，進行修改與調整，製作成需要的樣貌</h4>
+                        </div>
+                    </div>
+                    <div className='d-flex gap-3 mx-4'>
+                        <div className='w-25'>
+                            <Image src="/avatar/30141.webp" alt="30141" width="600" height="600" className='rounded'/>
+                        </div>
+                        <div className='my-1 text-white w-75'>
+                            <h2 className='text-primary fw-bolder'>張宇辰</h2>
+                            <h4>調整與修改Unity中的物件</h4>
+                            <h4 className='lh-base'>工作內容：負責處理遊戲引擎Unity中的物件與場景的互動模式，包括移動、拿取放下、與選單互動等</h4>
+                        </div>
+                    </div>
+                    <div className='d-flex gap-3 mx-4'>
+                        <div className='w-25'>
+                            <Image src="/avatar/30927.webp" alt="30927" width="600" height="600" className='rounded'/>
+                        </div>
+                        <div className='my-1 text-white w-75'>
+                            <h2 className='text-primary fw-bolder'>李佳翰</h2>
+                            <h4>製作網站及調整與修改Unity中的物件</h4>
+                            <h4 className='lh-base'>工作內容：負責製作網站與更新、維護，並幫忙處理遊戲引擎Unity的相關工作</h4>
+                        </div>
+                    </div>
+                    <div className='d-flex gap-3 mx-4'>
+                        <div className='w-25'>
+                            <Image src="/avatar/31396.webp" alt="31396" width="600" height="600" className='rounded'/>
+                        </div>
+                        <div className='my-1 text-white w-75'>
+                            <h2 className='text-primary fw-bolder'>施品伃</h2>
+                            <h4>美術場景製作與文書相關事宜</h4>
+                            <h4 className='lh-base'>工作內容：負責製作美術場景與物件模型，並處理報告、競賽等文書作業</h4>
+                        </div>
+                    </div>
+                    <div className='d-flex gap-3 mx-4'>
+                        <div className='w-25'>
+                            <Image src="/avatar/31453.webp" alt="31453" width="600" height="600" className='rounded'/>
+                        </div>
+                        <div className='my-1 text-white w-75'>
+                            <h2 className='text-primary fw-bolder'>甯子倢</h2>
+                            <h4>美術場景製作與AI客服</h4>
+                            <h4 className='lh-base'>工作內容：負責製作美術場景與物件模型，並製作、訓練AI客服機器人的模型</h4>
+                        </div>
+                    </div>
+                </Stack>
             </div>
         </main>
         </>
