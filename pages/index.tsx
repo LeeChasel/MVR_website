@@ -8,21 +8,14 @@ function PhotoCarousel()
   return (
     <div className='d-flex justify-content-center mt-4'>
       <Carousel className='w-75'>
-        <Carousel.Item>
-          <Image src="/photoCarousel/interface.png" alt="Login UI" width="1500" height="1000" className='w-100'/>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src="/photoCarousel/main_menu.PNG" alt="Main menu" width="1500" height="1000" className='w-100'/>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src="/photoCarousel/world.png" alt="Choose world" width="1500" height="1000" className='w-100'/>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src="/photoCarousel/event_world.PNG" alt="Event" width="1500" height="1000" className='w-100'/>
-        </Carousel.Item>
-        <Carousel.Item>
-          <Image src="/photoCarousel/shop1.PNG" alt="Choose world" width="1500" height="1000" className='w-100'/>
-        </Carousel.Item>
+        {[...new Array(5)].map((_, i) => {
+          const filenames = ['interface', 'main_menu', 'world', 'event_world', 'shop']
+          return (
+            <Carousel.Item key={i}>
+              <Image src={`/photoCarousel/${filenames[i]}.png`} alt={filenames[i]} width="1500" height="1000" className='w-100'/>
+            </Carousel.Item>
+          )
+        })}
       </Carousel>
     </div>
   )
@@ -44,11 +37,10 @@ export default function Home() {
           <h1 className='fw-bold text-center mt-3'>系統畫面簡介</h1>
           <p className='fs-4'>以下將展示系統畫面，依序為</p>
           <ListGroup as='ol' numbered className='w-50 align-self-center fs-5'>
-            <ListGroup.Item as='li' variant="secondary">戴上VR眼鏡進入主畫面，輸入帳號密碼，即登入完成</ListGroup.Item>
-            <ListGroup.Item as='li' variant="secondary">在主選單選擇想進行的動作</ListGroup.Item>
-            <ListGroup.Item as='li' variant="secondary">選擇預設世界或由自己創造新世界</ListGroup.Item>
-            <ListGroup.Item as='li' variant="secondary">在開放空間參與演唱會，使用在商店取得的商品支持表演者</ListGroup.Item>
-            <ListGroup.Item as='li' variant="secondary">在活動開放前提供特定的商店，販賣活動商品</ListGroup.Item>
+            {[...new Array(5)].map((_, i) => {
+            const listItems = ['戴上VR眼鏡進入主畫面，輸入帳號密碼，即登入完成', '在主選單選擇想進行的動作', '選擇預設世界或由自己創造新世界', '在開放空間參與演唱會，使用在商店取得的商品支持表演者', '在活動開放前提供特定的商店，販賣活動商品']
+            return <ListGroup.Item as='li' variant="secondary" key={i}>{listItems[i]}</ListGroup.Item>
+            })}
           </ListGroup>
           <PhotoCarousel />
         </div>
